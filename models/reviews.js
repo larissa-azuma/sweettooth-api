@@ -15,4 +15,4 @@ const reviewsSchema = new Schema({
     
 })
 
-export const Reviews = new ('Reviews', reviewsSchema, 'reviews')
+export const Reviews = model ('Reviews', reviewsSchema, 'reviews')

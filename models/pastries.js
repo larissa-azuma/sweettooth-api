@@ -9,11 +9,11 @@ const pastriesSchema = new Schema({
     },
 
     image:{
-        type:String, required: true
+        type:String, required: false
     },
     price: {
         type: Number, required: true,
     }
 })
 
-export const Pastries = new ('Pastries', pastriesSchema, 'pastries')
+export const Pastries = model ('Pastries', pastriesSchema, 'pastries')

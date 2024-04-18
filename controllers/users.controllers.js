@@ -15,3 +15,19 @@ export const Register=async (req,res,next)=>{
     next(error)
  }
 }
+
+//User Login
+export const Login=async (req,res,next)=>{
+   const{name,email,password} =req.body
+  try {
+     //create user account
+     const Login= await Users.findOne({
+         email,password  
+     })
+     //return response
+     res.status(201).json(Login)
+     
+  } catch (error) {
+     next(error)
+  }
+ }
