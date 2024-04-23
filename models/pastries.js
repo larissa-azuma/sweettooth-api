@@ -1,4 +1,9 @@
 import { Schema, model } from "mongoose";
+import multer from "multer";
+
+//Create malter upload middlewares
+const upload = multer({ dest: 'uploads/images' });
+
 
 const pastriesSchema = new Schema({
     name: {
