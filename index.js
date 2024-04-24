@@ -15,9 +15,9 @@ app.use(cors())
 app.use(express.json())
 
 // use routes
-app.use("/users",usersRoutes)
-app.use("/pastries",pastriesRoutes)
-app.use("/reviews",reviewsRoutes)
+app.use("/api/users",usersRoutes)
+app.use("/api//pastries",pastriesRoutes)
+app.use("/api/reviews",reviewsRoutes)
 
 // connect to databse
 await mongoose.connect(process.env.MONGO_URI)
